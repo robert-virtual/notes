@@ -11,12 +11,21 @@ export default function Home() {
       </Head>
       <nav className="flex fixed w-full p-4 shadow-md top-0 justify-between">
         <span>Nice Notes</span>
-        <button
-          onClick={signIn}
-          className="text-white bg-blue-500 p-2 rounded-sm"
-        >
-          Login
-        </button>
+        {session ? (
+          <button
+            onClick={signIn}
+            className="text-white bg-black p-2 rounded-sm"
+          >
+            logout
+          </button>
+        ) : (
+          <button
+            onClick={signIn}
+            className="text-white bg-blue-500 p-2 rounded-sm"
+          >
+            Login
+          </button>
+        )}
       </nav>
       <main className="flex flex-col items-center justify-center w-full px-20 text-center">
         {!session ? (
