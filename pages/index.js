@@ -9,8 +9,8 @@ export default function Home() {
         <title>Notes App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className="flex fixed w-full p-4 shadow-md top-0 justify-between">
-        <span>Nice Notes</span>
+      <nav className="flex items-center fixed w-full p-4 shadow-md top-0 justify-between">
+        <span className="text-3xl font-bold">Nice Notes</span>
         {session ? (
           <button
             onClick={signIn}
