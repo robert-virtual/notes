@@ -1,5 +1,6 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import Head from "next/head";
+import useForm from "../hooks/useForm";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -13,7 +14,7 @@ export default function Home() {
         <span className="text-3xl font-bold">Nice Notes</span>
         {session ? (
           <button
-            onClick={signIn}
+            onClick={signOut}
             className="text-white bg-black p-2 rounded-sm"
           >
             logout
